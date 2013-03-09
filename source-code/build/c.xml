@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<project basedir="." default="jletter" name="jletter compilation">
+
+	<!-- versions properties -->
+	<property name="major" value="1"/>
+	<property name="minor1" value="0"/>
+	<property name="minor2" value="0"/>
+	
+	<!-- properties -->
+	<property name="compiler_folder" value="../../../../../compilers/js"/>
+	<property name="source_code_folder" value=".."/>
+	<property name="main_output_folder" value="../../examples/js"/>
+	
+	<!-- google closure compiler task definition -->
+	<taskdef 
+		name="jscomp" 
+		classname="com.google.javascript.jscomp.ant.CompileTask"
+        classpath="${compiler_folder}/compiler.jar"/>
+	
+	<!-- default target: compile jletter -->
+	<target name="jletter">
+	
+		<!-- build auto version -->
+		<buildnumber file="revision.txt"/>
+		
+		<delete file="${main_output_folder}/jletter.min.js"/>
+		
+		<!-- compiler options -->
+		<jscomp 
+			compilationLevel="simple" 
+			warning="verbose"
+            debug="false" 
+			output="${main_output_folder}/jletter.min.js">
+
+			<!-- extern files -->
+			<externs dir="${compiler_folder}">
+				<file name="jquery-1.7.externs.js"/>
+			</externs>
+			
+			<!-- source files -->
+			<sources dir="${source_code_folder}">
+				<file name="jletter.js"/>
+			</sources>
+		</jscomp>
+		<!-- end of compiler options -->
+		
+		<!-- replace version in jletter.js -->
+		<replace 
+			file="${main_output_folder}/jletter.min.js" 
+			token="##VERSION##" 
+			value="${major}.${minor1}.${minor2}.${build.number}" 
+		/>
+		
+		<!-- create version file -->
+		<touch file="version.txt"/> 
+		<echo file="version.txt">${major}.${minor1}.${minor2}.${build.number}</echo> 
+		
+		<!-- copy -->
+		<copy file="${main_output_folder}/jletter.min.js" tofile="../../jletter.min.js"/>
+
+	</target>
+</project>
