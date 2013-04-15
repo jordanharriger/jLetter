@@ -13,7 +13,7 @@
 		"gallery",
 		"animation"
 	],
-	"version": "1.0.0.58",
+	"version": "1.0.58",
 	"author": {
 		"name": "no81no",
 		"url": "http://no81no.com"
@@ -31,5 +31,8 @@
 	"bugs": "https://github.com/no81no/jLetter/issues",
 	"homepage": "http://no81no.com/jletter/overview",
 	"docs": "http://no81no.com/jletter/usage",
-	"download": "http://no81no.com/jletter/download"
+	"download": "http://no81no.com/jletter/download",
+	"dependencies": {
+		"jquery": ">=1.5"
+	}
 }
