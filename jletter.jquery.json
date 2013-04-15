@@ -1,0 +1,35 @@
+{
+	"name": "jletter",
+	"title": "jLetter - jQuery text rotator plugin",
+	"description": "Letter is a lightweight text rotator plugin for jQuery. It rotates quotations one by one with fading effects on letters. Can be used as simple jQuery text slideshow, banner rotator, text rotator or jQuery text slider.",
+	"keywords": [
+		"jQuery", 
+		"text", 
+		"rotator", 
+		"effects", 
+		"animations", 
+		"slider", 
+		"plugin", 
+		"gallery",
+		"animation"
+	],
+	"version": "1.0.0.58",
+	"author": {
+		"name": "no81no",
+		"url": "http://no81no.com"
+	},	
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://opensource.org/licenses/MIT"
+		},
+		{
+			"type": "GNU General Public License (GPL) Version 2",
+			"url": "http://www.gnu.org/licenses/gpl-2.0.html"
+		}
+	],
+	"bugs": "https://github.com/no81no/jLetter/issues",
+	"homepage": "http://no81no.com/jletter/overview",
+	"docs": "http://no81no.com/jletter/usage",
+	"download": "http://no81no.com/jletter/download"
+}
