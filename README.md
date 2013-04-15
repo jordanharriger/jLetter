@@ -12,7 +12,7 @@
 
 
 ## Links
-* [View Demo](http://no81no.com/jletter/overvie) 
+* [View Demo](http://no81no.com/jletter/overview) 
 * [Usage](http://no81no.com/jletter/usage) 
 
 ## Info
